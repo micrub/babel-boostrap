@@ -3,21 +3,10 @@
 /* eslint spaced-comment:0 */
 /* eslint no-unused-vars:0 */
 
-//let CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const OUT_DIR = "dist";
 
 const path = require("path");
-//const fs = require("fs");
-//const webpack = require("webpack");
-
-//let WebpackBeforeBuildPlugin = require("before-build-webpack");
-
-//let packageJson = require("./package.json");
-
-//const copyOptions = [
-  //{ from: "resources/assets/" }
-//];
 
 module.exports = {
   entry: "./src/index.js",
@@ -25,17 +14,12 @@ module.exports = {
   output: {
     // export itself to a global var
     libraryTarget: "var",
-    // TODO pull name from package and prepare to be used as global var
+    // TODO globall should be less generic to avoid shadowing
     library: "Core",
     path: path.resolve(__dirname, OUT_DIR),
     filename: "index.js"
   },
   plugins: [
-    //new webpack.ProvidePlugin({
-      //$: "jquery",
-      //jQuery: "jquery"
-    //})
-    //new CopyWebpackPlugin(copyOptions)
   ],
   module: {
     loaders: [
