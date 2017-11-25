@@ -1,0 +1,24 @@
+{
+    "plugins": [
+        "transform-runtime",
+        "transform-object-rest-spread",
+        "transform-async-to-generator",
+        "syntax-trailing-function-commas",
+        "transform-class-properties"
+    ],
+    "presets": [
+        [
+          "env", {
+            "debug": false,
+            "loose": false,
+            "modules": "commonjs",
+            "spec": false,
+            "tragets": {
+              "node": "current",
+              "browsers" : "last 2 versions"
+            },
+            "useBuiltIns": false
+          }
+        ]
+    ]
+}
