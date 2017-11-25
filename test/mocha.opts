@@ -1,1 +1,1 @@
---compilers js:babel-register --require mocha-steps --timeout 3000
+--compilers js:babel-core/register --timeout 3000
