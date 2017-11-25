@@ -4,18 +4,9 @@
     "main": "src/index.js",
     "license": "MIT",
     "dependencies": {
-        "@babel/runtime": "^7.0.0-beta.32",
         "debug": "^3.0.1"
     },
     "devDependencies": {
-        "@babel/core": "7.0.0-beta.32",
-        "@babel/plugin-syntax-object-rest-spread": "^7.0.0-beta.32",
-        "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
-        "@babel/preset-env": "^7.0.0-beta.32",
-        "babel-cli": "^6.26.0",
-        "babel-loader": "8.0.0-beta.0",
-        "babel-plugin-transform-async-to-generator": "^6.24.1",
-        "babel-preset-env": "^1.6.0",
         "chai": "^4.1.1",
         "eslint": "^4.5.0",
         "eslint-config-standard": "^10.2.1",
