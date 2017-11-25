@@ -7,6 +7,11 @@
 const OUT_DIR = "dist";
 
 const path = require("path");
+const plugins = [
+  require("@babel/plugin-transform-class-properties"),
+]
+
+const presets = ["@babel/preset-env"]
 
 module.exports = {
   entry: "./src/index.js",
@@ -22,18 +27,17 @@ module.exports = {
   plugins: [
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components|resources)/,
-        loader: "babel-loader",
-        options: {
-          //cacheDirectory: true,
-          presets: ["env"],
-          plugins: [
-            require("babel-plugin-transform-runtime"),
-            require("babel-plugin-transform-async-to-generator")
-          ]
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            //cacheDirectory: true,
+            presets
+            plugins
+          }
         }
       }
     ]

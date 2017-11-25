@@ -1,6 +1,20 @@
 {
-    "plugins": [
-      ["transform-class-properties", { "spec": true }],
-    ],
-    "presets": [ "env" ]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "options": {},
+        "loose": true,
+        "debug": true,
+        "modules": "commonjs",
+        "spec": false,
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "//comment": ["transform-class-properties", { "spec": true }],
+  "plugins": [
+  ]
 }
