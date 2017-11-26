@@ -1,19 +1,26 @@
 {
     "name": "babel-bootstrap",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "src/index.js",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:micrub/babel-boostrap.git"
+    },
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.6.1",
         "chai": "^4.1.2",
-        "mocha": "^4.0.1"
+        "mocha": "^4.0.1",
+        "shelljs": "^0.7.8",
+        "yargs": "^10.0.3"
     },
     "scripts": {
-      "build": "rm dist/* -rf && npx babel src --out-dir dist/",
-      "test": "$(npm bin)/mocha"
+        "build": "rm dist/* -rf && npx babel src --out-dir dist/",
+        "test": "$(npm bin)/mocha"
     }
 }

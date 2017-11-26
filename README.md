@@ -20,3 +20,6 @@
      * Transpile ES6 `*.js` files content:
        * from `src/`.
         * into `dist/`.
+* `bin/` scripts:
+  * `clone.js $DIR` clones master into destination directory ,if it doesn't exists and passed path is absolute.
+  * `create-link.js` creates symlink to `clone.js` script as `~/bin/clone-babel-bootstrap`.
