@@ -1,21 +1,7 @@
 {
+  "presets": ["env"],
     "plugins": [
-      "@babel/plugin-transform-runtime",
-      "@babel/plugin-syntax-object-rest-spread"
-    ],
-    "presets": [
-        [
-          "env", {
-            "debug": false,
-            "loose": false,
-            "modules": "commonjs",
-            "spec": false,
-            "tragets": {
-              "node": "current",
-              "browsers" : "last 2 versions"
-            },
-            "useBuiltIns": false
-          }
-        ]
+      ["transform-class-properties", { "spec": true }]
     ]
 }
+

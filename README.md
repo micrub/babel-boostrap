@@ -1,8 +1,13 @@
-# babel 7 base project tempate
+# babel v6 based project tempalate
 
-babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack webpack-dev-server
-
-* babel 7 core bridge
-* webpack
+* Basic deps babel v6 dependencies preset-env and Mocha/Chai
+** babel-cli
+** babel-preset-env
+** mocha & chai
+** babel-polyfill
 ** plugins:
-*** transform-object-rest-spread
+*** transform-class-properties
+* basic npm scripts
+** test
+** build
+*** transpiling `src/` content into `dist/` directory.

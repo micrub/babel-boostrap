@@ -1,6 +1,5 @@
-const nil = null
-
-export default {
-  nil
+class Core {
+  constructor () {
+  }
 }
-
+export default Core
