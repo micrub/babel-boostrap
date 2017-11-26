@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 
-const shell = require('shelljs');
 const path = require('path')
 const yargs = require('yargs')
 
 const consts  = require('./consts');
+const shell = consts.shell;
 const REPO_URL = consts.REPO_URL;
 const SUCCESS_MESSAGE = consts.SUCCESS_MESSAGE;
 const NS = consts.NS;
 const d = require('debug')(NS)
 const argv = yargs.argv
-
-shell.config.silent  = true
-shell.config.verbose = false
-shell.config.fatal   = false
 
 function isGitInstalled() {
   if (!shell.which('git')) {
