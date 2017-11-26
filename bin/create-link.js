@@ -1,23 +1,20 @@
 #!/usr/bin/env node
 
-const shell = require('shelljs');
 const path = require('path')
 const yargs = require('yargs')
 
 const consts  = require('./consts');
 const REPO_URL = consts.REPO_URL;
 const package = consts.package;
+const shell = consts.shell;
 const SUCCESS_MESSAGE = consts.SUCCESS_MESSAGE;
 const NS = consts.NS;
 const d = require('debug')(NS)
 const argv = yargs.argv
 
-shell.config.silent  = true
-shell.config.verbose = true
-shell.config.fatal   = false
 
 d('start')
-//TODO should be runned forom repos root folder
+//TODO should be runned from repos root folder
 try {
   let name  = package.name
   d(name, NS)
@@ -32,7 +29,9 @@ try {
       shell.echo(r.stderr);
       shell.exit(1)
     } else {
-      shell.echo(SUCCESS_MESSAGE);
+      shell.echo(
+        "Symlink " + target + " created. " + "Please reload your shell environment."
+      );
       shell.exit(0)
     }
   } else {
