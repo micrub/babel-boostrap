@@ -1,33 +1,15 @@
 #!/usr/bin/env node
 
-const NS = ['babel','bootstrap'].join('-')
 const shell = require('shelljs');
-const d = require('debug')(NS)
 const path = require('path')
-const NIY = 'TBD:NIY'
-const package = require('../package.json')
+const yargs = require('yargs')
 
-let yargs = require('yargs')
-//yargs
-  //.command(
-    //"clone NON_EXISTING_ABS_PATH",
-    //NS,
-    //yargs => {
-      //yargs.positional("port", {
-        //describe: "port to bind on",
-        //default: 5000
-      //});
-    //},
-    //argv => {
-      //if (argv.verbose) console.info(`start server on :${argv.port}`);
-      //serve(argv.port);
-    //}
-  //)
+const consts  = require('./consts');
+const REPO_URL = consts.REPO_URL;
+const SUCCESS_MESSAGE = consts.SUCCESS_MESSAGE;
+const NS = consts.NS;
+const d = require('debug')(NS)
 const argv = yargs.argv
-
-const REPO_URL = package.repository.url
-
-const SUCCESS_MESSAGE = NS + ' is cloned.'
 
 shell.config.silent  = true
 shell.config.verbose = false
@@ -44,6 +26,7 @@ function isGitInstalled() {
 }
 
 d('start')
+
 function createWithParents(targetDir) {
   return shell.mkdir('-p', targetDir)
 }
@@ -56,7 +39,7 @@ function handleNonExisting(next, targetDir) {
       next(null, targetDir)
     }
   } else {
-    let e = new Error('Target path must be absolute. ' + targetDir + ' ' + NIY)
+    let e = new Error('Target path must be absolute. ' + targetDir)
     next(e)
   }
 }
