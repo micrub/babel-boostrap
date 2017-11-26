@@ -5,8 +5,8 @@
     "license": "MIT",
     "dependencies": {},
     "repository": {
-      "type": "git",
-      "url": "git@github.com:micrub/babel-boostrap.git"
+        "type": "git",
+        "url": "git@github.com:micrub/babel-boostrap.git"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
